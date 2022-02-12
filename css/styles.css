@@ -1,0 +1,157 @@
+/*************************** CSS VARIABLES **********************/
+:root {
+  --main-color: hsl(228, 45%, 44%);
+  --main-font-headings: 'Poppins', sans-serif;
+  --main-font-body: 'Open Sans', sans-serif;
+}
+
+/************************** ELEMENT SELECTORS ************************/
+body {
+  background-color: var(--main-color);
+  background-image: url("/Users/michalwozniak/Google Drive/Udemy WD Course/Challenges/huddle-landing-page-with-single-introductory-section-master/images/bg-desktop.svg");
+  padding: 2.5%;
+  width: 85%;
+  margin-right: 0;
+  margin-left: 20px;
+  font-family: var(--main-font-body);
+}
+
+h1 {
+  font-family: var(--main-font-headings);
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+/************************** CLASS SELECTORS ************************/
+.logo {
+  margin-bottom: 20px;
+  position: relative;
+  right: 15px;
+}
+
+.main {
+  margin-top: 1.5%;
+  margin-right: 1.5%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 10px;
+}
+
+.image {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.main-text {
+  justify-content: center;
+  line-height: 1.2;
+  padding-top: 10%;
+  padding-left: 10%;
+  color: #fff;
+}
+
+.btn {
+  position: absolute;
+  margin: 10px;
+  color: var(--main-color);
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 12px 50px;
+}
+
+.btn:hover {
+  background-color: purple;
+}
+
+.links {
+  float: right;
+  color: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.links a {
+  text-align: center;
+  padding: 5px;
+  border: 0.1rem solid;
+  border-radius: 50%;
+  border-color: white;
+}
+
+.links a:hover {
+  color: purple;
+  border-color: purple;
+}
+
+.footer {
+  color: white;
+  position: absolute;
+  margin: 1%;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/************** MEDIA QUERIES **************************/
+@media(max-width: 1370px) {
+  body {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .main {
+    margin-top: 1.5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+
+  .image {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .main-text {
+    margin: 0 auto;
+    position: relative;
+    float: none;
+    text-align: center;
+    padding: 5%;
+    display: block;
+  }
+
+  .btn {
+    position: relative;
+    display: block;
+  }
+
+  .links {
+    margin: auto;
+  }
+
+  .links a {
+    padding-right: 5%;
+  }
+}
+
+@media(max-width: 800px) {
+  .image {
+    width: 100%;
+}
+}
+@media(max-width:580px) {
+  .footer {
+    position: relative;
+  }
+  .links {
+    position: relative;
+  }
